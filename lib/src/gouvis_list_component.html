@@ -1,0 +1,16 @@
+<h2>Gouvis People</h2>
+<ul class="heroes">
+    <li *ngFor="let gouvis of gouviss"
+            (click)="onSelect(gouvis)"
+            [class.abc]="gouvis === seletectGouvis"
+            >
+        <span class="badge">{{gouvis.id}}</span> {{gouvis.name}}
+    </li>
+</ul>
+
+<div *ngIf="seletectGouvis != null">
+    <h2>
+        {{seletectGouvis.name | uppercase}} is my Gouvis
+    </h2>
+    <button (click)="gotoDetail()">View Details</button>
+</div>

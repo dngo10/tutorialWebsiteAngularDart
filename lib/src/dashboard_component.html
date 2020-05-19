@@ -1,0 +1,11 @@
+<h3>Top Gouvis</h3>
+<div class="grid gird-pad">
+    <a *ngFor="let item of gouvises"
+        [routerLink]="gouvisUrl(item.id)"
+    >
+        <div class="module hero">
+            <h4>{{item.name}}</h4>
+        </div>
+    </a>
+
+</div>
